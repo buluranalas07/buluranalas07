@@ -1,310 +1,79 @@
-import { useState, useEffect } from "react";
+<div align="center">
 
-const TITLES = [
-  "Engineering Manager",
-  "AI Augmented Full-Stack Developer",
-];
+#  John Robin Buluran
 
-function Typewriter() {
-  const [displayed, setDisplayed] = useState("");
-  const [titleIdx, setTitleIdx] = useState(0);
-  const [charIdx, setCharIdx] = useState(0);
-  const [deleting, setDeleting] = useState(false);
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=400&size=16&duration=3000&pause=1000&color=94A3B8&center=true&vCenter=true&repeat=true&width=520&height=30&lines=Engineering+Manager;AI+Augmented+Full-Stack+Developer" alt="Typing SVG" /></a>
 
-  useEffect(() => {
-    const current = TITLES[titleIdx];
-    let timeout;
-    if (!deleting) {
-      if (charIdx < current.length) {
-        timeout = setTimeout(() => setCharIdx((c) => c + 1), 60);
-      } else {
-        timeout = setTimeout(() => setDeleting(true), 2200);
-      }
-    } else {
-      if (charIdx > 0) {
-        timeout = setTimeout(() => setCharIdx((c) => c - 1), 35);
-      } else {
-        setDeleting(false);
-        setTitleIdx((i) => (i + 1) % TITLES.length);
-      }
-    }
-    setDisplayed(current.slice(0, charIdx));
-    return () => clearTimeout(timeout);
-  }, [charIdx, deleting, titleIdx]);
+---
 
-  return (
-    <span style={{ fontFamily: "'JetBrains Mono', monospace", color: "#8B949E", fontSize: 15, letterSpacing: 0.5 }}>
-      {displayed}
-      <span style={{ animation: "blink 1s step-end infinite", fontWeight: 300 }}>|</span>
-    </span>
-  );
-}
+### Tech Stack
 
-/*
-  hasContainer = true  → icon already has a filled background shape (rounded rect, circle, etc.)
-                         so we render it standalone (no tile bg)
-  hasContainer = false → icon is just a glyph, so we wrap it in a dark rounded tile
-*/
-const allIcons = [
-  // Languages
-  { name: "Java", color: "#ED8B00", hasContainer: false, path: "M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.762.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0 0-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.356.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.929 4.562 0 0 .07-.062.091-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.889 4.832 0 6.836-2.274-2.053-3.943-3.858-2.824-5.54 1.644-2.469 6.197-3.665 5.189-7.626M9.734 23.924c4.322.277 10.959-.154 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0 0 .553.457 3.393.639" },
-  { name: "TypeScript", color: "#3178C6", hasContainer: true, path: "M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.42.276.69.394.57.232.91.338c.46.14.882.308 1.266.504.384.197.716.43.997.7.28.27.497.585.654.943.156.358.234.774.234 1.249 0 .545-.108 1.014-.324 1.407-.216.393-.526.718-.93.974a4.238 4.238 0 0 1-1.424.588 7.272 7.272 0 0 1-1.813.213c-.656 0-1.276-.066-1.86-.197a7.405 7.405 0 0 1-1.573-.52v-2.633c.258.194.529.369.813.524a5.2 5.2 0 0 0 1.735.622c.3.068.606.102.918.102.302 0 .566-.032.792-.097a1.77 1.77 0 0 0 .573-.266.98.98 0 0 0 .349-.397.96.96 0 0 0 .12-.49.86.86 0 0 0-.166-.523c-.111-.155-.271-.302-.479-.44a4.876 4.876 0 0 0-.738-.374 19.878 19.878 0 0 0-.969-.362c-.446-.144-.87-.32-1.27-.53a4.28 4.28 0 0 1-1.013-.73 3.09 3.09 0 0 1-.67-.988 3.293 3.293 0 0 1-.24-1.294c0-.517.106-.975.32-1.374.214-.399.5-.731.86-.997a3.856 3.856 0 0 1 1.273-.615 5.702 5.702 0 0 1 1.557-.212zM10.5 12.188H7.687v8.062H5.812v-8.062H3v-1.938h7.5z" },
-  { name: "JavaScript", color: "#F7DF1E", hasContainer: true, path: "M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" },
-  { name: "Python", color: "#3776AB", hasContainer: false, path: "M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" },
-  { name: "C#", color: "#68217A", hasContainer: true, path: "M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zM9.426 7.12a5.55 5.55 0 011.985.38v1.181a4.5 4.5 0 00-2.064-.508 3.6 3.6 0 00-2.725 1.088 3.95 3.95 0 00-1.044 2.843 3.72 3.72 0 00.997 2.717 3.45 3.45 0 002.583 1.033 4.69 4.69 0 002.253-.522v1.146a5.31 5.31 0 01-2.385.465 4.54 4.54 0 01-3.37-1.292 4.64 4.64 0 01-1.283-3.386 5.06 5.06 0 011.33-3.622 4.63 4.63 0 013.473-1.432c.08-.006.167-.018.25-.018zm5.863 2.833v1.212h-1.2v1.2h1.2v1.212h1.212v-1.212h1.2v-1.2h-1.2V9.953zm3.612 0v1.212h-1.2v1.2h1.2v1.212H20.1v-1.212h1.2v-1.2h-1.2V9.953z" },
-  { name: "PHP", color: "#777BB4", hasContainer: true, path: "M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 01-.305.847c-.143.255-.33.49-.561.683zm4.495-1.853h-1.39l-.39 2.006c-.07.36-.04.613.09.752.13.14.397.21.8.21h.39l-.23 1.18h-.79c-.727 0-1.237-.13-1.53-.388-.293-.26-.376-.7-.25-1.324l.47-2.436h-.74l.22-1.14h.74l.28-1.43h1.39l-.28 1.43h1.39zm5.74 1.853c-.26.25-.574.438-.917.551-.335.108-.764.164-1.285.164h-1.18l-.327 1.681H13.89l1.23-6.326h2.65c.796 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 01-.306.847c-.142.255-.33.49-.56.683zm-1.13-1.752c.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29h-.944l-.515 2.648h.838c.557 0 .97-.105 1.243-.314.272-.21.455-.559.55-1.049z" },
-  // Frameworks
-  { name: "React", color: "#61DAFB", hasContainer: false, path: "M14.23 12.004a2.236 2.236 0 01-2.235 2.236 2.236 2.236 0 01-2.236-2.236 2.236 2.236 0 012.235-2.236 2.236 2.236 0 012.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.592.068-.837.182-.758.378-1.17 1.295-1.073 2.634.083 1.14.452 2.52 1.047 3.978C3.04 9.47 1.5 11.12 1.5 12.004c0 .887 1.548 2.545 4.764 3.888-.595 1.453-.966 2.83-1.048 3.967-.097 1.34.315 2.256 1.073 2.636.234.114.52.182.836.182 1.347 0 3.11-.96 4.89-2.615 1.78 1.653 3.54 2.602 4.885 2.602.316 0 .602-.068.84-.182.758-.378 1.168-1.295 1.07-2.634-.082-1.14-.452-2.52-1.048-3.978C20.96 14.547 22.5 12.9 22.5 12.004c0-.884-1.548-2.545-4.765-3.888.595-1.453.967-2.83 1.05-3.967.096-1.34-.316-2.256-1.074-2.636-.237-.114-.523-.182-.838-.182zm0 1.547c.157 0 .282.038.374.085.3.15.53.633.465 1.533-.067.93-.39 2.15-.933 3.48a22.78 22.78 0 00-2.87-1.365A22.84 22.84 0 0014.27 3.89c1.53-1.357 2.988-2.072 3.887-2.072zM12 8.55a28.28 28.28 0 011.56.938c-.496.248-1.01.476-1.54.68a28.65 28.65 0 00-1.27-2.33c.426.214.843.44 1.25.68zm0 6.97c-.302-.418-.592-.843-.87-1.275a25.58 25.58 0 01-.47-.783l.47-.783c.278-.432.568-.857.87-1.275.302.418.592.843.87 1.275.153.262.31.52.47.783a25.58 25.58 0 01-.47.783c-.278.432-.568.857-.87 1.275zm-1.834-3.52c0 .687.056 1.37.167 2.04a27.994 27.994 0 01-2.01-2.01 27.994 27.994 0 01-.168-2.04c0-.687.056-1.37.167-2.04a27.994 27.994 0 012.01-2.01c.67-.112 1.353-.168 2.04-.168.687 0 1.37.056 2.04.167a27.783 27.783 0 012.01 2.01c.112.67.168 1.353.168 2.04 0 .687-.056 1.37-.166 2.04a27.994 27.994 0 01-2.011 2.01 27.783 27.783 0 01-2.04.167c-.687 0-1.37-.056-2.04-.167zM6.27 9.942a28.58 28.58 0 00-1.56.938c.496.248 1.01.476 1.54.68a28.65 28.65 0 011.27-2.33c-.426.214-.843.44-1.25.68zM5.123 2.86c.157 0 .282.038.374.085.3.15.53.633.465 1.533-.067.93-.39 2.15-.933 3.48a22.78 22.78 0 00-2.87-1.365A22.84 22.84 0 003.803 3.89C5.333 2.533 6.79 1.818 7.69 1.818zM3.293 12.004c0-.432.775-1.61 3.073-2.89.24.55.506 1.104.8 1.655-.294.55-.56 1.105-.8 1.655-2.298-1.278-3.073-2.457-3.073-2.887zm1.83 5.152c-.3-.15-.53-.633-.465-1.533.067-.93.39-2.15.933-3.48a22.78 22.78 0 002.87 1.365A22.84 22.84 0 0010.1 16.21c-1.53 1.357-2.988 2.072-3.887 2.072-.157 0-.282-.038-.374-.085zm8.964 1.832a22.84 22.84 0 001.644-2.703 22.78 22.78 0 002.87-1.365c.543 1.33.866 2.55.933 3.48.065.9-.165 1.383-.465 1.533a.568.568 0 01-.374.085c-.898 0-2.356-.715-3.887-2.072zm6.62-4.1c.294-.55.56-1.104.8-1.654 2.298 1.278 3.073 2.457 3.073 2.887 0 .432-.775 1.61-3.073 2.89-.24-.55-.506-1.104-.8-1.655z" },
-  { name: "Next.js", color: "#E2E8F0", hasContainer: true, path: "M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 01-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 00-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 00-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 01-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 01-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 01.174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a4442.77 4442.77 0 004.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 002.466-2.163 11.944 11.944 0 002.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.86-8.292-8.209-9.695a12.597 12.597 0 00-2.498-.523A33.119 33.119 0 0011.572 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 01.237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 01.233-.296c.096-.05.13-.054.5-.054z" },
-  { name: "Node.js", color: "#339933", hasContainer: false, path: "M11.998 24c-.321 0-.641-.084-.922-.247l-2.936-1.737c-.438-.245-.224-.332-.08-.383.585-.203.703-.25 1.328-.604.065-.037.15-.023.218.017l2.256 1.339a.29.29 0 00.272 0l8.795-5.076a.277.277 0 00.134-.238V6.921a.28.28 0 00-.137-.242l-8.791-5.072a.278.278 0 00-.271 0L3.075 6.68a.284.284 0 00-.139.24v10.15c0 .099.053.19.138.236l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675a1.857 1.857 0 01-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.075.242a1.929 1.929 0 011.848 0l8.794 5.076c.57.329.924.944.924 1.603v10.15a1.86 1.86 0 01-.924 1.604l-8.794 5.078c-.28.163-.6.247-.925.247zm2.715-6.998c-3.857 0-4.663-1.774-4.663-3.262 0-.142.114-.253.254-.253h1.137c.126 0 .232.091.251.216.171 1.16.683 1.746 3.02 1.746 1.858 0 2.649-.42 2.649-1.404 0-.568-.224-.988-3.116-1.272-2.415-.238-3.91-.772-3.91-2.707 0-1.783 1.503-2.845 4.023-2.845 2.83 0 4.23.982 4.409 3.091a.258.258 0 01-.067.191.258.258 0 01-.184.08h-1.142a.251.251 0 01-.245-.199c-.272-1.21-.934-1.597-2.77-1.597-2.04 0-2.277.711-2.277 1.244 0 .646.28.834 3.017 1.198 2.713.36 4.009.87 4.009 2.77 0 1.924-1.603 3.027-4.4 3.027z" },
-  { name: "Express.js", color: "#8B949E", hasContainer: false, path: "M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.511 4.86 3.556-4.86a1.478 1.478 0 011.836-.674L18.823 10l5.177 6.588zm-7.617-9.216l-.237-.312L12 14.544l-.24-.342-4.05-5.484a1.517 1.517 0 00-1.835-.664l4.81 6.459L5.9 20.558a1.517 1.517 0 001.835.664l3.827-5.19.076-.1 3.829 5.19a1.517 1.517 0 001.836-.665l-4.84-6.508z" },
-  { name: "Tailwind CSS", color: "#06B6D4", hasContainer: false, path: "M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" },
-  // Databases & Cloud
-  { name: "SQL Server", color: "#CC2927", hasContainer: false, path: "M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 011.481-.315c.766.047 1.677.788 1.677.788L24 9.948v3.474L16.6 20.1 12 22.375 0 14.555V9.525l4.105-5.42zM11.3 10.2l-4.5 2.6v-5.2l4.5-2.6v5.2z" },
-  { name: "MySQL", color: "#4479A1", hasContainer: false, path: "M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zM10.037 18.695h-.927l-.61-2.27-.087-.333-.027-.093c-.133.667-.266 1.332-.4 1.996l-.18.7h-.94l-1.093-5.53h.9l.588 3.063.027.147c.04.2.08.404.12.607l.014-.067.04-.2.06-.267.087-.4.147-.527 1.32-2.356h.807l.293 4.33c.02.26.033.527.04.8l.007.4zM14.707 14.06h-1.694v1.187h1.574v.86h-1.574v1.733h1.76v.86h-2.687v-5.53h2.62v.89zM19.607 18.695h-2.567v-5.53h.927v4.64h1.64v.89zM22.407 18.695h-.927v-4.64h-1.28v-.89h3.487v.89h-1.28v4.64z" },
-  { name: "Firebase", color: "#FFCA28", hasContainer: false, path: "M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" },
-  { name: "Google Cloud", color: "#4285F4", hasContainer: false, path: "M12.19 2.38a9.344 9.344 0 00-9.234 6.893c.053-.02-.055.013 0 0-3.875 2.551-3.922 8.11-.247 10.941l.006-.007-.007.003a6.542 6.542 0 005.252 2.656h8.26a6.425 6.425 0 005.413-2.95l.043-.068c2.549-3.832 1.006-8.682-2.978-10.467l.026.009A9.344 9.344 0 0012.19 2.38zm-.358 4.146c1.244-.04 2.518.368 3.486 1.15h.005a2.108 2.108 0 01-1.36 1.647 4.174 4.174 0 00-2.11-.623A4.26 4.26 0 007.726 13a2.56 2.56 0 01-1.855-.142 7.024 7.024 0 016.031-6.332zm4.983 3.81a4.87 4.87 0 011.677 3.715v.467a2.35 2.35 0 011.675 1.67H16.03a4.164 4.164 0 01-3.852-2.56 2.349 2.349 0 011.137-1.598 2.345 2.345 0 01.284 1.04 2.57 2.57 0 002.57 2.267 2.57 2.57 0 002.572-2.274 7.157 7.157 0 00-.918-2.727z" },
-  // AI & Tools
-  { name: "Vertex AI", color: "#4285F4", hasContainer: false, path: "M21.17 8.13L13.41.37a1.25 1.25 0 00-1.77 0L2.83 9.18a1.25 1.25 0 000 1.77l3.54 3.54L12 8.86l5.63 5.63 3.54-3.54a1.25 1.25 0 000-1.77v-.05zm-9.17 15.5l-5.63-5.63L12 12.37l5.63 5.63L12 23.63z" },
-  { name: "Claude", color: "#D4A27F", hasContainer: false, path: "M4.709 15.955l4.397-10.986a1.348 1.348 0 012.614 0l4.397 10.986a1.076 1.076 0 01-1.012 1.478 1.133 1.133 0 01-1.065-.717l-1.078-2.695H7.864l-1.078 2.695a1.133 1.133 0 01-1.065.717 1.076 1.076 0 01-1.012-1.478zm5.405-4.082h3.598L12 7.476l-1.886 4.397z" },
-  { name: "Cursor", color: "#A78BFA", hasContainer: false, path: "M5.5 3l13 9-13 9V3z" },
-  { name: "Git", color: "#F05032", hasContainer: false, path: "M23.546 10.93L13.067.452a1.55 1.55 0 00-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 012.327 2.341l2.66 2.66a1.838 1.838 0 11-1.103 1.036l-2.48-2.48v6.53a1.838 1.838 0 11-1.513-.09V8.764a1.838 1.838 0 01-.998-2.41L7.629 3.622.452 10.798a1.55 1.55 0 000 2.189l10.48 10.479a1.55 1.55 0 002.186 0l10.428-10.428a1.55 1.55 0 000-2.108z" },
-  { name: "Postman", color: "#FF6C37", hasContainer: true, path: "M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428 6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099zm2.471 7.485a.855.855 0 010 1.21l-4.071 4.071a.855.855 0 01-1.21-1.21l4.071-4.071a.855.855 0 011.21 0z" },
-  { name: "VS Code", color: "#007ACC", hasContainer: false, path: "M23.15 2.587L18.21.21a1.494 1.494 0 00-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 00-1.276.057L.327 7.261A1 1 0 00.326 8.74L3.899 12 .326 15.26a1 1 0 00.001 1.479L1.65 17.94a.999.999 0 001.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 001.704.29l4.942-2.377A1.5 1.5 0 0024 20.06V3.939a1.5 1.5 0 00-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" },
-];
+**Languages**
 
-function IconTile({ name, color, path, hasContainer, delay }) {
-  const size = 46;
-  // Icons with a built-in container shape render standalone — no background tile
-  if (hasContainer) {
-    return (
-      <div
-        title={name}
-        style={{
-          width: size,
-          height: size,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "default",
-          transition: "all 0.25s ease",
-          animation: `fadeUp 0.4s ease ${delay}s both`,
-          borderRadius: 10,
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-3px) scale(1.1)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0) scale(1)";
-        }}
-      >
-        <svg viewBox="0 0 24 24" width="38" height="38" fill={color}>
-          <path d={path} />
-        </svg>
-      </div>
-    );
-  }
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="42" height="42" alt="Java" title="Java" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="42" height="42" alt="TypeScript" title="TypeScript" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="42" height="42" alt="JavaScript" title="JavaScript" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="42" height="42" alt="Python" title="Python" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="42" height="42" alt="C#" title="C#" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="42" height="42" alt="PHP" title="PHP" />
+</p>
 
-  // Standalone glyph icons get a dark tile background
-  return (
-    <div
-      title={name}
-      style={{
-        width: size,
-        height: size,
-        borderRadius: 10,
-        background: "#161B22",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: "default",
-        transition: "all 0.25s ease",
-        animation: `fadeUp 0.4s ease ${delay}s both`,
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.background = color + "20";
-        e.currentTarget.style.transform = "translateY(-3px) scale(1.08)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.background = "#161B22";
-        e.currentTarget.style.transform = "translateY(0) scale(1)";
-      }}
-    >
-      <svg viewBox="0 0 24 24" width="24" height="24" fill={color}>
-        <path d={path} />
-      </svg>
-    </div>
-  );
-}
+**Frameworks & Frontend**
 
-export default function GithubProfile() {
-  const [visible, setVisible] = useState(false);
-  useEffect(() => { setTimeout(() => setVisible(true), 100); }, []);
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="42" height="42" alt="React" title="React" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="42" height="42" alt="Next.js" title="Next.js" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="42" height="42" alt="Node.js" title="Node.js" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="42" height="42" alt="Express.js" title="Express.js" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="42" height="42" alt="Tailwind CSS" title="Tailwind CSS" />
+</p>
 
-  return (
-    <div
-      style={{
-        minHeight: "100vh",
-        color: "#E6EDF3",
-        fontFamily: "'Outfit', sans-serif",
-        padding: "48px 24px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        background: "#0D1117",
-      }}
-    >
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
-        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(16px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes gradientMove {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
+**Databases & Cloud**
 
-      <div
-        style={{
-          maxWidth: 520,
-          width: "100%",
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateY(0)" : "translateY(20px)",
-          transition: "all 0.6s ease",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
-        }}
-      >
-        {/* Name + Typewriter */}
-        <h1
-          style={{
-            fontSize: 40,
-            fontWeight: 700,
-            margin: 0,
-            lineHeight: 1.1,
-            background: "linear-gradient(135deg, #F0F6FC, #8B949E)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundSize: "200% 200%",
-            animation: "gradientMove 4s ease infinite",
-          }}
-        >
-          John Robin
-        </h1>
-        <div style={{ height: 24, marginTop: 8 }}>
-          <Typewriter />
-        </div>
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="42" height="42" alt="MySQL" title="MySQL" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" width="42" height="42" alt="Firebase" title="Firebase" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" width="42" height="42" alt="Google Cloud Platform" title="Google Cloud Platform" />
+</p>
 
-        {/* Divider */}
-        <div
-          style={{
-            width: "100%",
-            height: 1,
-            background: "#21262D",
-            margin: "28px 0",
-          }}
-        />
+**AI & Developer Tools**
 
-        {/* Tech Icons Grid */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 10,
-            justifyContent: "center",
-            maxWidth: 440,
-          }}
-        >
-          {allIcons.map((item, i) => (
-            <IconTile key={item.name} {...item} delay={i * 0.03} />
-          ))}
-        </div>
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="42" height="42" alt="Git" title="Git" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="42" height="42" alt="Postman" title="Postman" />
+  &nbsp;&nbsp;
+  <img src="https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" width="42" height="42" alt="Google AI Studio" title="Google AI Studio" />
+  &nbsp;&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg" width="42" height="42" alt="Claude" title="Claude" />
+  &nbsp;&nbsp;
+  <img src="https://www.cursor.com/favicon.ico" width="42" height="42" alt="Cursor" title="Cursor" />
+</p>
 
-        {/* Divider */}
-        <div
-          style={{
-            width: "100%",
-            height: 1,
-            background: "#21262D",
-            margin: "28px 0",
-          }}
-        />
+---
 
-        {/* Connect */}
-        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-          <a
-            href="https://www.linkedin.com/in/john-buluran/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              padding: "10px 20px",
-              borderRadius: 10,
-              background: "#161B22",
-              border: "1px solid #21262D",
-              color: "#58A6FF",
-              fontSize: 14,
-              fontWeight: 500,
-              fontFamily: "'JetBrains Mono', monospace",
-              textDecoration: "none",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#58A6FF40";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#21262D";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-            LinkedIn
-          </a>
+###  Connect with Me
 
-          <a
-            href="mailto:buluranalas@gmail.com"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              padding: "10px 20px",
-              borderRadius: 10,
-              background: "#161B22",
-              border: "1px solid #21262D",
-              color: "#8B949E",
-              fontSize: 14,
-              fontWeight: 500,
-              fontFamily: "'JetBrains Mono', monospace",
-              textDecoration: "none",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#8B949E40";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#21262D";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-              <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
-            </svg>
-            buluranalas@gmail.com
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
+<p>
+  <a href="https://www.linkedin.com/in/john-buluran/">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="42" height="42" alt="LinkedIn" title="LinkedIn" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="mailto:buluranalas@gmail.com">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="42" height="42" alt="Gmail" title="Gmail" />
+  </a>
+</p>
+
+</div>
