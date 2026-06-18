@@ -2,7 +2,7 @@
 
 #  John Robin Buluran
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=400&size=16&duration=3000&pause=1000&color=94A3B8&center=true&vCenter=true&repeat=true&width=520&height=30&lines=Engineering+Manager;AI+Augmented+Full-Stack+Developer" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=400&size=16&duration=3000&pause=1000&color=94A3B8&center=true&vCenter=true&repeat=true&width=520&height=30&lines=Software+Engineer" alt="Typing SVG" /></a>
 
 ---
 
