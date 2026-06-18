@@ -1,8 +1,8 @@
 <div align="center">
 
-# John Robin Buluran
+#  John Robin Buluran
 
-### Software Engineer
+<h3>Software Engineer</h3>
 
 ---
 
@@ -57,14 +57,14 @@
   &nbsp;&nbsp;
   <img src="https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" width="42" height="42" alt="Google AI Studio" title="Google AI Studio" />
   &nbsp;&nbsp;
-  <img src="https://avatars.githubusercontent.com/u/81281865?s=200&v=4" width="42" height="42" alt="Claude (Anthropic)" title="Claude (Anthropic)" />
+  <img src="https://raw.githubusercontent.com/username/repository/main/path/to/image_3.png" width="42" height="42" alt="Claude" title="Claude" />
   &nbsp;&nbsp;
   <img src="https://www.cursor.com/favicon.ico" width="42" height="42" alt="Cursor" title="Cursor" />
 </p>
 
 ---
 
-### Connect with Me
+###  Connect with Me
 
 <p>
   <a href="https://www.linkedin.com/in/john-buluran/">
