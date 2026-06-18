@@ -1,10 +1,14 @@
 <div align="center">
 
-#  John Robin Buluran
+<img src="https://media.tenor.com/w8qHk72E_HMAAAAi/duck-walking.gif" width="60" alt="Walking Duck" />
+
+<br/>
+
+# John Robin Buluran
 
 <h3>Software Engineer</h3>
 
----
+<br/>
 
 ### Tech Stack
 
@@ -57,14 +61,14 @@
   &nbsp;&nbsp;
   <img src="https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" width="42" height="42" alt="Google AI Studio" title="Google AI Studio" />
   &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/username/repository/main/path/to/image_3.png" width="42" height="42" alt="Claude" title="Claude" />
+  <img src="https://rustacean.net/assets/rustacean-flat-happy.svg" width="42" height="42" alt="Claude" title="Claude" />
   &nbsp;&nbsp;
   <img src="https://www.cursor.com/favicon.ico" width="42" height="42" alt="Cursor" title="Cursor" />
 </p>
 
----
+<br/>
 
-###  Connect with Me
+### Connect with Me
 
 <p>
   <a href="https://www.linkedin.com/in/john-buluran/">
