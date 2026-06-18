@@ -61,7 +61,7 @@
   &nbsp;&nbsp;
   <img src="https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" width="42" height="42" alt="Google AI Studio" title="Google AI Studio" />
   &nbsp;&nbsp;
-  <img src="https://rustacean.net/assets/rustacean-flat-happy.svg" width="42" height="42" alt="Claude" title="Claude" />
+  <img src="https://avatars.githubusercontent.com/u/84566318?v=4" width="42" height="42" alt="Claude" title="Claude" style="border-radius: 8px;" />
   &nbsp;&nbsp;
   <img src="https://www.cursor.com/favicon.ico" width="42" height="42" alt="Cursor" title="Cursor" />
 </p>
