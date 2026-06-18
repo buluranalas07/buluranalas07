@@ -1,8 +1,8 @@
 <div align="center">
 
-#  John Robin Buluran
+# John Robin Buluran
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=400&size=16&duration=3000&pause=1000&color=94A3B8&center=true&vCenter=true&repeat=true&width=520&height=30&lines=Software+Engineer" alt="Typing SVG" /></a>
+### Software Engineer
 
 ---
 
@@ -57,14 +57,14 @@
   &nbsp;&nbsp;
   <img src="https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png" width="42" height="42" alt="Google AI Studio" title="Google AI Studio" />
   &nbsp;&nbsp;
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg" width="42" height="42" alt="Claude" title="Claude" />
+  <img src="https://avatars.githubusercontent.com/u/81281865?s=200&v=4" width="42" height="42" alt="Claude (Anthropic)" title="Claude (Anthropic)" />
   &nbsp;&nbsp;
   <img src="https://www.cursor.com/favicon.ico" width="42" height="42" alt="Cursor" title="Cursor" />
 </p>
 
 ---
 
-###  Connect with Me
+### Connect with Me
 
 <p>
   <a href="https://www.linkedin.com/in/john-buluran/">
